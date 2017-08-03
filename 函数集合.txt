@@ -1,0 +1,89 @@
+目录：
+      1.数组中的所有偶数元素
+      2.数组中的所有第偶数个元素
+      3.返回输入数组中所有1位数组成的数组
+      4.返回数组中所有二位数组成的数组
+      5.返回数组中所有3位数组成的数组
+      6.计算平均数函数
+      7.判断元素是否在数组中
+
+function choose_even(collection) {                                      //数组中的所有偶数元素
+      var i = 0;
+      var answer = [];
+      for (var i = 0 ;i<collection.length;i++)
+      {
+            if (collection[i]%2 == 0)
+                  answer.push(collection[i]);
+      }
+      return answer
+  //在这里写入代码
+}
+
+function choose_evennum(collection) {                                   //数组中的所有第偶数个元素
+      var arr = [];
+      for(var i=0;i<Math.floor(collection.length/2);i++)
+      {
+            arr.push(collection[i*2+1]);
+      }
+      return arr
+  //在这里写入代码
+}
+
+function anweishufenzu_1(collection)                  //返回输入数组中所有位数组成的数组
+{
+      var arr = [];
+      for(var i=0;i<Math.floor(collection.length);i++)
+      {
+            if(collection[i]>0 && collection[i]<10)
+                  {arr.push(collection[i]);}
+      }
+      return arr      
+}
+
+function anweishufenzu_2(collection)                  //返回数组中所有二位数组成的数组
+{
+      var arr = [];
+      for(var i=0;i<Math.floor(collection.length);i++)
+      {
+            if(collection[i]>10 && collection[i]<100)
+                  {arr.push(collection[i]);}
+      }
+      return arr       
+}
+
+function anweishufenzu_3(collection)                  //返回数组中所有3位数组成的数组
+{
+      var arr = [];
+      for(var i=0;i<Math.floor(collection.length);i++)
+      {
+            if(collection[i]>100 && collection[i]<1000)
+                  {arr.push(collection[i]);}
+      }
+      return arr    
+}
+
+function compute_average(collection) {                      //计算平均数函数
+    var sum = eval(collection.join("+"));
+    return (sum/collection.length*100)/100;
+}
+
+
+function contains(arr, obj) {                               //判断元素是否在数组中
+  var i = arr.length;
+  while (i--) {
+    if (arr[i] === obj) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function removeByValue(arr, val) {
+  for(var i=0; i<arr.length; i++) {
+    if(arr[i] == val) {
+      arr.splice(i, 1);
+      break;
+    }
+  }
+}
+

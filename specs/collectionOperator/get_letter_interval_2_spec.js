@@ -18,19 +18,19 @@ describe('get_letter_interval', function () {
 
   it('根据给出的两个数字得到对应自增的字母区间', function() {
 
-    var result = get_letter_interval(20, 53);
+    var result = get_letter_interval(1, 34);
     expect(result).toEqual(collection_a);
   });
 
   it('根据给出的两个数字得到对应自减的字母区间', function() {
 
-    var result = get_letter_interval(53, 20);
+    var result = get_letter_interval(34, 1);
     expect(result).toEqual(collection_b);
   });
 
   it('给定两个相同的数字得到只含此数字对应字母的数组', function() {
 
-    var result = get_letter_interval(28, 28);
+    var result = get_letter_interval(9,9);
     expect(result).toEqual(['ab']);
   });
 });
